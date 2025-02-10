@@ -1,0 +1,6 @@
+<p>This extension allows you to browse the web safely and securely!</p>
+            <button id="goToLearning">Learning Area</button>
+            <script src="main.js"></script>
+            <button class="settingsIcon">
+                <i class="fas fa-cog"></i>
+            </button>
