@@ -1,10 +1,21 @@
 {
     "manifest_version": 3,
-    "name": "Security Web Browser Extension",
-    "version": "0.1",
+    "name": "Security Web Browser Extension V2",
+    "version": "0.4.1",
     "description": "Browser Extension that focuses on keeping the user secure.",
     "action": {
-        "default_icon": "images/lock.png",
-        "default_popup": "main.html"
+      "default_popup": "index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+      "https://*.virustotal.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
     }
-}
+  }
+  

@@ -4,3 +4,26 @@
             <button class="settingsIcon">
                 <i class="fas fa-cog"></i>
             </button>
+
+
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.action.setBadgeText({ text: "Scan URL" });
+});
+
+chrome.action.onClicked.addListener(() => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        const url = tabs[0].url;
+        const apiKey = "7972d4ed633e9da46d75938a2ea97ada1bede5fb72c6e99ffde2436277f8a3d9";
+
+        fetch(`https://www.virustotal.com/api/v3/urls?apikey=${apiKey}&url=${encodeURIComponent(url)}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log("VirusTotal scan result:", data);
+                chrome.action.setBadgeText({ text: "Scanned" });
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                chrome.action.setBadgeText({ text: "Error" });
+            });
+    });
+});

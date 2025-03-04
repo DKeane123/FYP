@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Info - Project V0.5 Web Extension</title>
+    <meta property="og:title" content="Info - Project V0.5 Web Extension" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./info.css" rel="stylesheet" />
+
+      <div class="info-container">
+        <navbar33-wrapper class="navbar33-wrapper">
+          <!--Navbar33 component-->
+          <header class="navbar33-container navbar33">
+            <header data-thq="thq-navbar" class="navbar33-navbar-interactive">
+              <div data-thq="thq-navbar-nav" class="navbar33-desktop-menu">
+                <h1 class="navbar33-text1">
+                  <fragment class="info-fragment6">
+                    <span class="info-text6">Net Protector</span>
+                  </fragment>
+                </h1>
+                <nav class="navbar33-links1">
+                  <svg width="30" height="40" viewBox="0 0 24 24">
+                    <path
+                      d="M20.75 16.714a1 1 0 0 1-.014.143a.75.75 0 0 1-.736.893H6a1.25 1.25 0 1 0 0 2.5h14a.75.75 0 0 1 0 1.5H6A2.75 2.75 0 0 1 3.25 19V5A2.75 2.75 0 0 1 6 2.25h13.4c.746 0 1.35.604 1.35 1.35zM9 6.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"
+                      fill="currentColor"
+                      clip-rule="evenodd"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <a href="index.html" class="navbar33-navlink1">
+                    <svg
+                      width="30"
+                      height="40"
+                      viewBox="0 0 36 36"
+                      class="navbar33-icon12"
+                    >
+                      <path
+                        d="M33 19a1 1 0 0 1-.71-.29L18 4.41L3.71 18.71A1 1 0 0 1 2.3 17.3l15-15a1 1 0 0 1 1.41 0l15 15A1 1 0 0 1 33 19"
+                        fill="currentColor"
+                        class="clr-i-solid clr-i-solid-path-1"
+                      ></path>
+                      <path
+                        d="M18 7.79L6 19.83V32a2 2 0 0 0 2 2h7V24h6v10h7a2 2 0 0 0 2-2V19.76Z"
+                        fill="currentColor"
+                        class="clr-i-solid clr-i-solid-path-2"
+                      ></path>
+                      <path d="M0 0h36v36H0z" fill="none"></path>
+                    </svg>
+                  </a>
+                  <a href="info.html" class="navbar33-navlink2">
+                    <svg
+                      width="30"
+                      height="40"
+                      viewBox="0 0 48 48"
+                      class="navbar33-icon16"
+                    >
+                      <defs>
+                        <mask id="ipSInfo0">
+                          <g fill="none">
+                            <path
+                              d="M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z"
+                              fill="#fff"
+                              stroke="#fff"
+                              stroke-width="4"
+                              stroke-linejoin="round"
+                            ></path>
+                            <path
+                              d="M24 11a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5"
+                              fill="#000"
+                              clip-rule="evenodd"
+                              fill-rule="evenodd"
+                            ></path>
+                            <path
+                              d="M24.5 34V20h-2M21 34h7"
+                              stroke="#000"
+                              stroke-width="4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </mask>
+                      </defs>
+                      <path
+                        d="M0 0h48v48H0z"
+                        fill="currentColor"
+                        mask="url(#ipSInfo0)"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a href="settings.html" class="navbar33-navlink3">
+                    <svg
+                      width="30"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      class="navbar33-icon24"
+                    >
+                      <path
+                        d="M19.5 12c0-.23-.01-.45-.03-.68l1.86-1.41c.4-.3.51-.86.26-1.3l-1.87-3.23a.987.987 0 0 0-1.25-.42l-2.15.91c-.37-.26-.76-.49-1.17-.68l-.29-2.31c-.06-.5-.49-.88-.99-.88h-3.73c-.51 0-.94.38-1 .88l-.29 2.31c-.41.19-.8.42-1.17.68l-2.15-.91c-.46-.2-1-.02-1.25.42L2.41 8.62c-.25.44-.14.99.26 1.3l1.86 1.41a7.3 7.3 0 0 0 0 1.35l-1.86 1.41c-.4.3-.51.86-.26 1.3l1.87 3.23c.25.44.79.62 1.25.42l2.15-.91c.37.26.76.49 1.17.68l.29 2.31c.06.5.49.88.99.88h3.73c.5 0 .93-.38.99-.88l.29-2.31c.41-.19.8-.42 1.17-.68l2.15.91c.46.2 1 .02 1.25-.42l1.87-3.23c.25-.44.14-.99-.26-1.3l-1.86-1.41c.03-.23.04-.45.04-.68m-7.46 3.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </a>
+                </nav>
+                <div class="navbar33-icon-group1">
+                  <a
+                    href="https://www.linkedin.com/in/danielkeane/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="navbar33-link6"
+                  >
+                    <svg
+                      width="33"
+                      height="44"
+                      viewBox="0 0 56 56"
+                      class="navbar33-icon26"
+                    >
+                      <path
+                        d="M45.608 45.607h-7.415V34.002c0-2.766-.048-6.326-3.853-6.326c-3.86 0-4.449 3.015-4.449 6.129v11.802h-7.407V21.745h7.108v3.263h.103c.99-1.877 3.409-3.855 7.016-3.855c7.51 0 8.897 4.94 8.897 11.367zM14.123 18.485a4.3 4.3 0 0 1-4.303-4.301a4.3 4.3 0 0 1 8.6 0a4.3 4.3 0 0 1-4.297 4.301m-3.714 27.122h7.423V21.745H10.41zM49.3 3H6.688C4.653 3 3 4.614 3 6.606v42.787c0 1.992 1.653 3.608 3.688 3.608H49.3c2.04 0 3.699-1.616 3.699-3.608V6.606C53 4.614 51.34 3 49.301 3"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
+                  <path
+                    d="M438.857 73.143c242.286 0 438.857 196.571 438.857 438.857 0 193.714-125.714 358.286-300 416.571-22.286 4-30.286-9.714-30.286-21.143 0-14.286 0.571-61.714 0.571-120.571 0-41.143-13.714-67.429-29.714-81.143 97.714-10.857 200.571-48 200.571-216.571 0-48-17.143-86.857-45.143-117.714 4.571-11.429 19.429-56-4.571-116.571-36.571-11.429-120.571 45.143-120.571 45.143-34.857-9.714-72.571-14.857-109.714-14.857s-74.857 5.143-109.714 14.857c0 0-84-56.571-120.571-45.143-24 60.571-9.143 105.143-4.571 116.571-28 30.857-45.143 69.714-45.143 117.714 0 168 102.286 205.714 200 216.571-12.571 11.429-24 30.857-28 58.857-25.143 11.429-89.143 30.857-127.429-36.571-24-41.714-67.429-45.143-67.429-45.143-42.857-0.571-2.857 26.857-2.857 26.857 28.571 13.143 48.571 64 48.571 64 25.714 78.286 148 52 148 52 0 36.571 0.571 70.857 0.571 81.714 0 11.429-8 25.143-30.286 21.143-174.286-58.286-300-222.857-300-416.571 0-242.286 196.571-438.857 438.857-438.857zM166.286 703.429c1.143-2.286-0.571-5.143-4-6.857-3.429-1.143-6.286-0.571-7.429 1.143-1.143 2.286 0.571 5.143 4 6.857 2.857 1.714 6.286 1.143 7.429-1.143zM184 722.857c2.286-1.714 1.714-5.714-1.143-9.143-2.857-2.857-6.857-4-9.143-1.714-2.286 1.714-1.714 5.714 1.143 9.143 2.857 2.857 6.857 4 9.143 1.714zM201.143 748.571c2.857-2.286 2.857-6.857 0-10.857-2.286-4-6.857-5.714-9.714-3.429-2.857 1.714-2.857 6.286 0 10.286s7.429 5.714 9.714 4zM225.143 772.571c2.286-2.286 1.143-7.429-2.286-10.857-4-4-9.143-4.571-11.429-1.714-2.857 2.286-1.714 7.429 2.286 10.857 4 4 9.143 4.571 11.429 1.714zM257.714 786.857c1.143-3.429-2.286-7.429-7.429-9.143-4.571-1.143-9.714 0.571-10.857 4s2.286 7.429 7.429 8.571c4.571 1.714 9.714 0 10.857-3.429zM293.714 789.714c0-4-4.571-6.857-9.714-6.286-5.143 0-9.143 2.857-9.143 6.286 0 4 4 6.857 9.714 6.286 5.143 0 9.143-2.857 9.143-6.286zM326.857 784c-0.571-3.429-5.143-5.714-10.286-5.143-5.143 1.143-8.571 4.571-8 8.571 0.571 3.429 5.143 5.714 10.286 4.571s8.571-4.571 8-8z"
+                  ></path>
+                  <a
+                    href="https://github.com/DKeane123"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="navbar33-link7"
+                  >
+                    <svg
+                      width="30"
+                      height="40"
+                      viewBox="0 0 1024 1024"
+                      class="navbar33-icon29"
+                    >
+                      <path
+                        d="M896.428 1024h-258q2-13 2-25q0-85-19.5-170.5t-54.5-127.5q130-11 198-76.5t68-169.5q0-91-64-140v-91q0-10-11-21t-21-11q-12 0-119 70q-47-6-105-6t-105 6q-107-70-119-70q-10 0-21 11t-11 21q0 9-2 44t-3 51q-59 49-59 136q0 104 68 169.5t198 76.5q-5 7-14 21q-43 46-124 46q-16 0-32-13t-31.5-32t-32.5-38t-42-32t-54-13q0 8 10 20.5t26.5 33t27.5 42.5q26 51 54 73.5t74 22.5q48 0 87-14q-23 88-23 181q0 12 2 25h-258q-53 0-90.5-37.5T.428 896V128q0-53 37.5-90.5t90.5-37.5h768q53 0 90.5 37.5t37.5 90.5v768q0 53-37.5 90.5t-90.5 37.5"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div data-thq="thq-burger-menu" class="navbar33-burger-menu">
+                <svg viewBox="0 0 1024 1024" class="navbar33-icon31">
+                  <path
+                    d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+              <div data-thq="thq-mobile-menu" class="navbar33-mobile-menu">
+                <div class="navbar33-nav">
+                  <div class="navbar33-top">
+                    <img
+                      alt="logo"
+                      src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/84ec08e8-34e9-42c7-9445-d2806d156403/fac575ac-7a41-484f-b7ac-875042de11f8?org_if_sml=1&amp;force_format=original"
+                      class="navbar33-logo"
+                    />
+                    <div data-thq="thq-close-menu" class="navbar33-close-menu">
+                      <svg viewBox="0 0 1024 1024" class="navbar33-icon33">
+                        <path
+                          d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <nav class="navbar33-links2">
+                    <a
+                      href="https://www.teleporthq.io"
+                      class="thq-body-small thq-link"
+                    >
+                      <fragment class="info-fragment1">
+                        <span class="info-text1">Link1</span>
+                      </fragment>
+                    </a>
+                    <a
+                      href="https://www.teleporthq.io"
+                      class="thq-body-small thq-link"
+                    >
+                      <fragment class="info-fragment2">
+                        <span class="info-text2">Link2</span>
+                      </fragment>
+                    </a>
+                    <a
+                      href="https://www.teleporthq.io"
+                      class="thq-body-small thq-link"
+                    >
+                      <fragment class="info-fragment3">
+                        <span class="info-text3">Link3</span>
+                      </fragment>
+                    </a>
+                    <a
+                      href="https://www.teleporthq.io"
+                      class="thq-body-small thq-link"
+                    >
+                      <fragment class="info-fragment4">
+                        <span class="info-text4">Link4</span>
+                      </fragment>
+                    </a>
+                    <a
+                      href="https://www.teleporthq.io"
+                      class="thq-body-small thq-link"
+                    >
+                      <fragment class="info-fragment5">
+                        <span class="info-text5">Link5</span>
+                      </fragment>
+                    </a>
+                  </nav>
+                </div>
+                <div class="navbar33-icon-group2">
+                  <svg
+                    viewBox="0 0 950.8571428571428 1024"
+                    class="thq-icon-small"
+                  >
+                    <path
+                      d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                    ></path></svg
+                  ><svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="thq-icon-small"
+                  >
+                    <path
+                      d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                    ></path></svg
+                  ><svg
+                    viewBox="0 0 602.2582857142856 1024"
+                    class="thq-icon-small"
+                  >
+                    <path
+                      d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </header>
+          </header>
+        </navbar33-wrapper>
+        <hero14-wrapper class="hero14-wrapper" rootclassname="hero14undefined">
+          <!--Hero14 component-->
+          <div
+            class="hero14-container thq-section-padding hero14root-class-name"
+          >
+            <div class="hero14-max-width thq-section-max-width">
+              <div class="hero14-column">
+                <div class="hero14-content">
+                  <h1 class="hero14-text1 thq-heading-1">
+                    <fragment class="info-fragment8">
+                      <span class="info-text8">
+                        Catchy and engaging hero headline here
+                      </span>
+                    </fragment>
+                  </h1>
+                  <p class="hero14-text2 thq-body-large">
+                    <fragment class="info-fragment7">
+                      <span class="info-text7">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse varius enim in eros elementum tristique.
+                        Duis cursus, mi quis viverra ornare, eros dolor interdum
+                        nulla, ut commodo diam libero vitae erat.
+                      </span>
+                    </fragment>
+                  </p>
+                  <div class="hero14-actions"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </hero14-wrapper>
+      </div>
+    </div>
+    <script src="teleport-custom-scripts.js" defer></script>
+  </body>
+</html>

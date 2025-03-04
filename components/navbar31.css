@@ -1,0 +1,143 @@
+.navbar31-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  background-color: var(--dl-color-theme-neutral-light);
+}
+ 
+.navbar31-navbar-interactive {
+  width: 990px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+  background-color: #D9D9D9;
+}
+ 
+.navbar31-desktop-menu {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+ 
+.navbar31-links {
+  gap: var(--dl-space-space-twounits);
+  flex: 1;
+  width: 529px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.navbar31-navlink1 {
+  display: contents;
+}
+ 
+.navbar31-icon12 {
+  text-decoration: none;
+}
+ 
+.navbar31-navlink2 {
+  display: contents;
+}
+ 
+.navbar31-icon14 {
+  text-decoration: none;
+}
+ 
+.navbar31-navlink3 {
+  display: contents;
+}
+ 
+.navbar31-icon16 {
+  text-decoration: none;
+}
+ 
+.navbar31-icon-group {
+  gap: var(--dl-space-space-twounits);
+  display: flex;
+  align-items: center;
+  margin-left: var(--dl-space-space-twounits);
+}
+ 
+.navbar31-link1 {
+  display: contents;
+}
+ 
+.navbar31-icon18 {
+  text-decoration: none;
+}
+ 
+.navbar31-link2 {
+  display: contents;
+}
+ 
+.navbar31-icon20 {
+  text-decoration: none;
+}
+ 
+.navbar31-fragment {
+  display: contents;
+}
+ 
+.navbar31-text2 {
+  display: inline-block;
+}
+ 
+@media(max-width: 991px) {
+  .navbar31-container {
+    display: flex;
+  }
+  .navbar31-navbar-interactive {
+    background-color: #DE7C5A;
+  }
+  .navbar31-text1 {
+    fill: #DE7C5A;
+    color: #DE7C5A;
+  }
+  .navbar31-icon10 {
+    fill: #DE7C5A;
+    color: #DE7C5A;
+  }
+  .navbar31-icon12 {
+    fill: #DE7C5A;
+    color: #DE7C5A;
+  }
+  .navbar31-icon14 {
+    fill: #DE7C5A;
+    color: #DE7C5A;
+  }
+  .navbar31-icon16 {
+    fill: #DE7C5A;
+    color: #DE7C5A;
+  }
+  .navbar31-icon18 {
+    fill: #DE7C5A;
+    color: #DE7C5A;
+  }
+  .navbar31-icon20 {
+    fill: #DE7C5A;
+    color: #DE7C5A;
+  }
+}
+ 
+@media(max-width: 767px) {
+  .navbar31-navbar-interactive {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .navbar31-desktop-menu {
+    display: none;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .navbar31-navbar-interactive {
+    padding: var(--dl-space-space-unit);
+  }
+}
