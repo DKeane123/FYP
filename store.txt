@@ -1,29 +1,109 @@
-<p>This extension allows you to browse the web safely and securely!</p>
-            <button id="goToLearning">Learning Area</button>
-            <script src="main.js"></script>
-            <button class="settingsIcon">
-                <i class="fas fa-cog"></i>
-            </button>
-
-
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.action.setBadgeText({ text: "Scan URL" });
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('scanButton').addEventListener('click', () => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      const currentUrl = tabs[0].url;
+      chrome.runtime.sendMessage({
+        action: 'scanUrl',
+        url: currentUrl
+      }, (response) => {
+        document.getElementById('result').innerText = JSON.stringify(response, null, 2);
+      });
+    });
+  });
 });
 
-chrome.action.onClicked.addListener(() => {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        const url = tabs[0].url;
-        const apiKey = "7972d4ed633e9da46d75938a2ea97ada1bede5fb72c6e99ffde2436277f8a3d9";
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    'x-apikey': ''
+  }
+};
 
-        fetch(`https://www.virustotal.com/api/v3/urls?apikey=${apiKey}&url=${encodeURIComponent(url)}`)
-            .then(response => response.json())
-            .then(data => {
-                console.log("VirusTotal scan result:", data);
-                chrome.action.setBadgeText({ text: "Scanned" });
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                chrome.action.setBadgeText({ text: "Error" });
-            });
+fetch(`https://www.virustotal.com/api/v3/urls/${encodedUrl}`, options)
+  .then(res => res.json())
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+    chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === "scanUrl") {
+      const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          'x-apikey': ''
+        }
+      };
+      const encodedPaddedUrl = btoa(request.url);
+      const encodedUrl = encodedPaddedUrl.replace(/=*$/, '')
+      fetch(`https://www.virustotal.com/api/v3/urls/${encodedUrl}`, options)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Resource not found');
+        }
+        return response.json();
+      })
+      .then(data => sendResponse(data))
+      .catch(error => {
+        console.error('Error:', error);
+        sendResponse({ error: error.message });
+      });
+      return true;
+    }
+});
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('scanButton').addEventListener('click', () => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      const currentUrl = tabs[0].url;
+      chrome.runtime.sendMessage(
+        {
+          action: 'scanUrl',
+          url: currentUrl
+        },
+        (response) => {
+          document.getElementById('result').innerText = JSON.stringify(response, null, 2);
+        }
+      );
     });
+  });
+});
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "scanUrl") {
+    const apiKey = "";
+    const encodedPaddedUrl = btoa(request.url);
+    const encodedUrl = encodedPaddedUrl.replace(/=*$/, '');
+    console.log('encodedUrl:', encodedUrl);
+
+    fetch(`https://www.virustotal.com/api/v3/urls/${encodedUrl}`, {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        'x-apikey': apiKey
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Resource not found');
+        }
+        return response.json();
+      })
+      .then(data => sendResponse(data))
+      .catch(error => {
+        console.error('Error:', error);
+        sendResponse({ error: error.message });
+      });
+
+    return true;
+  }
 });

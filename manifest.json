@@ -9,10 +9,20 @@
     "permissions": [
         "activeTab",
         "scripting",
-        "storage"
+        "storage",
+        "downloads"
     ],
     "host_permissions": [
       "https://*.virustotal.com/*"
+    ],
+    "web_accessable_resources": [
+      {
+        "resources": [
+          "popup.js",
+          "popup.css",
+          "popup.html"
+        ]
+      }
     ],
     "background": {
       "service_worker": "background.js"
