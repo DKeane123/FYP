@@ -15,13 +15,14 @@
     "host_permissions": [
       "https://*.virustotal.com/*"
     ],
-    "web_accessable_resources": [
+    "web_accessible_resources": [
       {
         "resources": [
           "popup.js",
           "popup.css",
           "popup.html"
-        ]
+        ],
+        "matches": ["<all_urls>"]
       }
     ],
     "background": {
