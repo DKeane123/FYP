@@ -197,8 +197,10 @@
 .info-text3 {
   display: inline-block;
 }
- 
 
+.detections-URL {
+  
+}
  
 @media(max-width: 991px) {
   .navbar33-navbar-interactive {
