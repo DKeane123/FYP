@@ -35,4 +35,3 @@ function updateTextBox() {
 updateTextBox();
 
 setInterval(updateTextBox, 5000);
-

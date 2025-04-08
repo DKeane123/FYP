@@ -1,8 +1,11 @@
+
+
+
 function scanCurrentTab() {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    const currentUrl = tabs[0].url; // Get the current tab's URL
-    //const currentUrl = "http://117.206.73.36:35280/bin.sh"; // Get the current tab's URL
-    const apiKey = "";
+    //const currentUrl = tabs[0].url; // Get the current tab's URL
+    const currentUrl = "http://117.206.73.36:35280/bin.sh"; // Get the current tab's URL
+    const VTapiKey = "7972d4ed633e9da46d75938a2ea97ada1bede5fb72c6e99ffde2436277f8a3d9";
     const encodedUrl = btoa(currentUrl).replace(/=*$/, ''); // Encode URL in Base64 without padding
     const safeURL = currentUrl.replace(/^http/, "hxxp") // Replace http with hxxp to prevent accidental clicks
 
@@ -22,7 +25,7 @@ function scanCurrentTab() {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        'x-apikey': apiKey
+        'x-apikey': VTapiKey
       }
     })
     .then((response) => {
@@ -102,3 +105,38 @@ const targetQueryUrl = "http://117.206.73.36:35280/bin.sh"; // Replace with your
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('scanButton2').addEventListener('click', queryURL);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('scanPageButton').addEventListener('click', scanWebpage);
+});
+
+function scanWebpage() {
+  const ABapiKey = '0a28293fd597b0cf9c839d03ed57c04a523493dc113ff446655fa0651ce5c3a0d18133f30edebf93';
+  const ipAddress = '127.0.0.1'; // Replace with the IP address you want to check
+  let pageContent = document.body.innerText;
+  let links = document.querySelectorAll('a');
+
+  let ipRegex = /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/g;
+  pageContent.match(ipRegex)?.forEach(ip => {
+    fetch(`https://api.abuseipdb.com/api/v2/check?ipAddress=${ip}`, {
+      method: 'GET',
+      headers: {
+          'Accept': 'application/json',
+          'Key': ABapiKey
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('resultPage').innerText = data;
+      console.log(data); // Logs the response from the API
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
+
+  // links.forEach(link => {
+  //     console.log(link.href); // Logs each link URL
+  // });
+}
+
