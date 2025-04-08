@@ -5,7 +5,7 @@ function scanCurrentTab() {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     //const currentUrl = tabs[0].url; // Get the current tab's URL
     const currentUrl = "http://117.206.73.36:35280/bin.sh"; // Get the current tab's URL
-    const VTapiKey = "7972d4ed633e9da46d75938a2ea97ada1bede5fb72c6e99ffde2436277f8a3d9";
+    const VTapiKey = "";
     const encodedUrl = btoa(currentUrl).replace(/=*$/, ''); // Encode URL in Base64 without padding
     const safeURL = currentUrl.replace(/^http/, "hxxp") // Replace http with hxxp to prevent accidental clicks
 
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function scanWebpage() {
-  const ABapiKey = '0a28293fd597b0cf9c839d03ed57c04a523493dc113ff446655fa0651ce5c3a0d18133f30edebf93';
+  const ABapiKey = '';
   const ipAddress = '127.0.0.1'; // Replace with the IP address you want to check
   let pageContent = document.body.innerText;
   let links = document.querySelectorAll('a');
