@@ -28,3 +28,31 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     pausedDownloadId = null;
   }
 });
+
+
+// chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+//   if (changeInfo.status === "complete") {
+
+//     chrome.tabs.sendMessage(tabId, { action: "runScan" }, (response) => {
+//       if (chrome.runtime.lastError) {
+//         console.error("❌ Message sending error:", chrome.runtime.lastError.message);
+//       } else {
+//         console.log("✅ Response from settings.js:", response.status);
+//       }
+//     });
+//   }
+// });
+
+
+
+// chrome.tabs.onUpdated.addListener(() => {
+//   scanCurrentTab();
+//   scanBlockedSites();
+//   console.error("scan run")
+// });
+
+// chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+//   chrome.tabs.sendMessage(tabs[0].id, { action: "scanCurrentTab" }, (response) => {
+//       console.error("Done"); // Output: "Function executed!"
+//   });
+// });

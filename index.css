@@ -56,6 +56,10 @@
 .navbar33-navlink3 {
   display: contents;
 }
+
+.navbar33-navlink4 {
+  display: contents;
+}
  
 .navbar33-icon24 {
   text-decoration: none;
@@ -362,7 +366,7 @@
     border-radius: 24px;
     padding-right: var(--dl-space-space-halfunit);
     padding-bottom: var(--dl-space-space-halfunit);
-    background-image: linear-gradient(to right, #ff1c47 0%, #550303 100%);
+    background-image: linear-gradient(to right, #631313 0%, #631313 100%);
     border-left-width: 0px;
   }
   .home-text7 {
@@ -379,7 +383,7 @@
     border-style: double;
     margin-right: var(--dl-space-space-oneandhalfunits);
     border-radius: 24px;
-    background-image: linear-gradient(to right, #ff1c47 0%, #550303 100%);
+    background-image: linear-gradient(to right, #631313 0%, #631313 100%);
     border-top-width: 2px;
     border-left-width: 0px;
     border-right-width: 2px;
@@ -404,7 +408,7 @@
     border-color: #FF002F;
     border-style: double;
     border-radius: 24px;
-    background-image: linear-gradient(to right, #ff1c47 0%, #550303 100%);
+    background-image: linear-gradient(to right, #631313 0%, #631313 100%);
     border-top-width: 2px;
     border-left-width: 0px;
     border-right-width: 2px;
@@ -425,4 +429,38 @@
   .home-container5 {
     margin-top: 20px;
   }
+}
+
+.recentdetectionsURL {
+  fill: white;
+  color: white;
+  padding-top: 10px;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+.reputation {
+  fill: white;
+  color: white;
+  padding-top: 10px;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+.maliciousScans {
+  fill: white;
+  color: white;
+  padding-top: 10px;
+  font-size: 6em;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.totalScans {
+  fill: white;
+  color: white;
+  padding-top: 10px;
+  font-size: 6em;
+  text-align: center;
+  padding-top: 60px;
 }
